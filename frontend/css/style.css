@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* BODY */
+
+body{
+    background: linear-gradient(to right, #141e30, #243b55);
+    min-height: 100vh;
+}
+
+
+/* LOGIN PAGE */
+
+.login-container{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box{
+    background: white;
+
+    padding: 40px;
+
+    width: 350px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+    text-align: center;
+}
+
+.login-box h1{
+    margin-bottom: 30px;
+    color: #243b55;
+}
+
+.login-box input{
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.login-box button{
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    background: #243b55;
+
+    color: white;
+
+    font-size: 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.login-box button:hover{
+    background: #141e30;
+}
+
+#message{
+    margin-top: 15px;
+    color: red;
+}
+
+
+/* DASHBOARD */
+
+.dashboard{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.sidebar{
+    width: 250px;
+    background: #141e30;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar ul li{
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #243b55;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar ul li:hover{
+    background: #1d2d44;
+}
+
+.main-content{
+    flex: 1;
+    padding: 30px;
+    background: #f4f4f4;
+}
+
+.main-content h1{
+    margin-bottom: 30px;
+    color: #243b55;
+}
+
+
+/* DASHBOARD CARDS */
+
+.cards{
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
+}
+
+.card{
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    text-align: center;
+}
+
+.card h3{
+    margin-bottom: 15px;
+    color: #243b55;
+}
+
+.card p{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* CHART SECTION */
+
+.chart-container{
+
+    margin-top: 40px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+/* PRODUCTS PAGE */
+
+.products-container{
+    padding: 30px;
+    background: #f4f4f4;
+    min-height: 100vh;
+}
+
+.products-container h1{
+    margin-bottom: 20px;
+    color: #243b55;
+}
+
+
+/* SEARCH BAR */
+
+#searchInput{
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+    font-size: 16px;
+}
+
+
+/* FORMS */
+
+#productForm,
+#billingForm{
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(200px,1fr));
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+#productForm input,
+#productForm button,
+#billingForm input,
+#billingForm button,
+#billingForm select{
+    padding: 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+}
+
+#productForm button,
+#billingForm button{
+    background: #243b55;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+#productForm button:hover,
+#billingForm button:hover{
+    background: #141e30;
+}
+
+
+/* TABLE */
+
+table{
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+}
+
+table th,
+table td{
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    text-align: center;
+}
+
+table th{
+    background: #243b55;
+    color: white;
+}
+
+table button{
+    padding: 8px 12px;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    margin: 2px;
+}
+
+
+/* EDIT BUTTON */
+
+table button:first-child{
+    background: #243b55;
+}
+
+table button:first-child:hover{
+    background: #141e30;
+}
+
+
+/* DELETE BUTTON */
+
+table button:last-child{
+    background: red;
+}
+
+table button:last-child:hover{
+    background: darkred;
+}
+
+
+/* BILLING */
+
+.bill-box{
+    margin-top: 30px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.bill-box h2{
+    margin-bottom: 15px;
+    color: #243b55;
+}
+
+.bill-box p{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+
+/* PDF BUTTON */
+
+#downloadPdfBtn{
+
+    margin-top: 20px;
+
+    padding: 12px 20px;
+
+    background: #243b55;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+#downloadPdfBtn:hover{
+
+    background: #141e30;
+}
+
+
+/* REPORTS */
+
+.report-summary{
+    margin-bottom: 20px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.report-summary h2{
+    color: #243b55;
+}
+/* ============================= */
+/* LOW STOCK ALERT SECTION */
+/* ============================= */
+
+.low-stock-container{
+
+    margin-top:40px;
+
+    background:#ffffff;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+}
+
+.low-stock-container h2{
+
+    color:#d32f2f;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.low-stock-container table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:10px;
+
+}
+
+.low-stock-container table th{
+
+    background:#243b55;
+
+    color:white;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    text-align:center;
+
+}
+
+.low-stock-container table td{
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    text-align:center;
+
+}
+
+.low-stock-container table tr:nth-child(even){
+
+    background:#f5f5f5;
+
+}
+
+.low-stock-container table tr:hover{
+
+    background:#e8f4ff;
+
+    transition:0.3s;
+
+}
+
+.low-stock-container table td:last-child{
+
+    color:red;
+
+    font-weight:bold;
+
+}

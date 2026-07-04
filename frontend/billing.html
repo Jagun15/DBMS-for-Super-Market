@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Billing</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="products-container">
+
+        <h1>Billing System</h1>
+
+        <form id="billingForm">
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Customer Name"
+                required
+            >
+
+            <select id="productSelect" required>
+
+                <option value="">
+                    Select Product
+                </option>
+
+            </select>
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Quantity"
+                required
+            >
+
+            <button type="submit">
+                Generate Bill
+            </button>
+
+        </form>
+
+
+        <div class="bill-box">
+
+            <h2>Invoice</h2>
+
+            <p id="billCustomer"></p>
+
+            <p id="billProduct"></p>
+
+            <p id="billQuantity"></p>
+
+            <p id="billTotal"></p>
+
+            <button id="downloadPdfBtn">
+
+    Download PDF
+
+</button>
+
+        </div>
+
+    </div>
+
+    <script src="js/billing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+
+</html>

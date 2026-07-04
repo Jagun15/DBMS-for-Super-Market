@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Products</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="products-container">
+
+        <h1>Product Management</h1>
+<input
+    type="text"
+    id="searchInput"
+    placeholder="Search Product..."
+>
+        <form id="productForm">
+
+            <input
+                type="text"
+                id="productName"
+                placeholder="Product Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="category"
+                placeholder="Category"
+                required
+            >
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Quantity"
+                required
+            >
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Price"
+                required
+            >
+
+            <button type="submit"
+                    id="submitBtn">
+
+                Add Product
+
+            </button>
+
+        </form>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+
+                    <th>Category</th>
+
+                    <th>Quantity</th>
+
+                    <th>Price</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="productTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="js/products.js"></script>
+
+</body>
+
+</html>

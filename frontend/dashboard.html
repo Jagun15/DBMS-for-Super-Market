@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+
+        <div class="sidebar">
+
+            <h2>Supermarket</h2>
+
+            <ul>
+
+                <li onclick="goToDashboard()">
+                    Dashboard
+                </li>
+
+                <li onclick="goToProducts()">
+                    Products
+                </li>
+
+                <li onclick="goToBilling()">
+                    Billing
+                </li>
+
+                <li onclick="goToReports()">
+                    Reports
+                </li>
+
+                <li onclick="logout()">
+                    Logout
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="main-content">
+
+            <h1>Dashboard</h1>
+
+            <!-- Dashboard Cards -->
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>Total Products</h3>
+
+                    <p id="totalProducts">0</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Total Quantity</h3>
+
+                    <p id="totalQuantity">0</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Total Inventory Value</h3>
+
+                    <p id="totalValue">₹0</p>
+
+                </div>
+
+            </div>
+
+            <!-- Sales Chart -->
+
+            <div class="chart-container">
+
+                <h2>Sales Analytics</h2>
+
+                <canvas id="salesChart"></canvas>
+
+            </div>
+
+            <!-- Low Stock Alerts -->
+
+            <div class="low-stock-container">
+
+                <h2>⚠ Low Stock Alerts</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Product</th>
+
+                            <th>Category</th>
+
+                            <th>Quantity</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="lowStockTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+
+    <script>
+
+        function logout(){
+
+            localStorage.removeItem("token");
+
+            window.location.href = "login.html";
+
+        }
+
+        function goToProducts(){
+
+            window.location.href = "products.html";
+
+        }
+
+        function goToDashboard(){
+
+            window.location.href = "dashboard.html";
+
+        }
+
+        function goToBilling(){
+
+            window.location.href = "billing.html";
+
+        }
+
+        function goToReports(){
+
+            window.location.href = "reports.html";
+
+        }
+
+    </script>
+
+    <!-- Chart.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Dashboard Data -->
+
+    <script src="js/dashboard.js"></script>
+
+    <!-- Sales Chart -->
+
+    <script src="js/chart.js"></script>
+
+</body>
+
+</html>
